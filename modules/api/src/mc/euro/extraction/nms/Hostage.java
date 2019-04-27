@@ -50,7 +50,7 @@ public interface Hostage {
     
     public Profession getProfessionType();
     public void setProfessionType(Profession x);
-    public String getCustomName();
+    // public String getCustomName();
     public void setCustomName(String name);
     
     public void setHealth(double health);

@@ -152,7 +152,6 @@ public class CraftHostage extends EntityVillager implements Hostage {
         return rescuer;
     }
 
-    @Override
     public String getCustomName() {
         return this.customName;
     }
