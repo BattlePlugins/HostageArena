@@ -142,13 +142,12 @@ public class CraftHostage extends EntityVillager implements EntityOwnable, Hosta
 
     @Override
     public Profession getProfessionType() {
-        int id = getProfession();
-        return Profession.getProfession(id);
+        return getProfessionType();
     }
 
     @Override
     public void setProfessionType(Profession x) {
-        setProfession(x.getId());
+        setProfession(x.ordinal() - 1);
     }
 
     @Override

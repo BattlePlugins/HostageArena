@@ -38,7 +38,7 @@ public class HostageFactory extends NPCFactory {
             Villager v = (Villager) entity;
             World world = ((CraftWorld) v.getWorld()).getHandle();
             
-            CraftHostage hostage = new CraftHostage(world, v.getProfession().getId());
+            CraftHostage hostage = new CraftHostage(world, v.getProfession().ordinal() - 1);
             hostage.setLocation(v.getLocation());
             
             world.removeEntity(((CraftEntity)entity).getHandle());
@@ -62,7 +62,7 @@ public class HostageFactory extends NPCFactory {
     @Override
     public Hostage spawnHostage(Location loc, Profession prof) {
         World world = ((CraftWorld) loc.getWorld()).getHandle();
-        CraftHostage hostage = new CraftHostage(world, prof.getId());
+        CraftHostage hostage = new CraftHostage(world, prof.ordinal() - 1);
         hostage.setLocation(loc);
         world.addEntity(hostage);
         return hostage;
