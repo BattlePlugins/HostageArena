@@ -37,7 +37,8 @@ public class Villagers {
     }
     
     public static Profession getRandomType() {
-        return Profession.getProfession(new Random().nextInt(5));
+        Profession[] professions = new Profession[] {Profession.FARMER, Profession.LIBRARIAN, Profession.PRIEST, Profession.BLACKSMITH, Profession.BUTCHER};
+        return professions[(new Random().nextInt(5))];
     }
     
     public static String getName() {
