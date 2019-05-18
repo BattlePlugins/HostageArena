@@ -218,6 +218,12 @@
             <type>jar</type>
         </dependency>
         <dependency>
+            <groupId>mc.euro</groupId>
+            <artifactId>extraction-v1_14_R1</artifactId>
+            <version>parent</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
             <groupId>mc.alk</groupId>
             <artifactId>BattleArena</artifactId>
             <version>3.9.11.4</version>

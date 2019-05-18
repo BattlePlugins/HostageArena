@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 
 import mc.euro.extraction.nms.Hostage;
 
+import net.minecraft.server.v1_4_5.EntityAgeable;
 import net.minecraft.server.v1_4_5.EntityVillager;
 import net.minecraft.server.v1_4_5.PathfinderGoalSelector;
 import net.minecraft.server.v1_4_5.World;
@@ -31,7 +32,12 @@ public class CraftHostage extends EntityVillager implements Hostage {
         this.goalSelector.a(0, new PathfinderGoalFollowPlayer(this, 1.0F, 2.0F, 2.0F));
         this.setHealth(20);
     }
-    
+
+    @Override
+    public EntityAgeable createChild(EntityAgeable entityAgeable) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
     public CraftHostage(World w, int profession) {
         super(w, profession);
         clearPathfinders();
